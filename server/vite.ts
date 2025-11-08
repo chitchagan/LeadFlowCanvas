@@ -20,7 +20,7 @@ export function log(msg: string) {
  */
 export function serveStatic(app: Express) {
   // At runtime, __dirname === <project>/dist/server
-  const distPath = path.resolve(import.meta.dirname, "../dist/public");
+  const distPath = path.resolve(__dirname, "./public");
   
   if (!fs.existsSync(distPath)) {
     throw new Error(
