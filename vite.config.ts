@@ -38,10 +38,10 @@ export default defineConfig(async () => {
         "@assets": path.resolve(import.meta.dirname, "client", "src", "assets"),
       },
     },
-  build: {
+build: {
   outDir: path.resolve(import.meta.dirname, "../dist/public"),
   emptyOutDir: true,
-    },
+},
     server: {
       fs: { strict: true, deny: ["**/.*"] },
     },
