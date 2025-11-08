@@ -2,10 +2,16 @@
 import path from "path";
 import fs from "fs";
 import express, { type Express } from "express";
+import { fileURLToPath } from "url";
+
+// Recreate __dirname safely for ESM environments (like Node 22+)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export function log(msg: string) {
   console.log(msg);
 }
+
 
 /**
  * Production static serving.
